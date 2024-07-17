@@ -7,6 +7,7 @@
         function GetUserData() {
 
         }
+
         function funcao1() {
             alert("Eu sou um alerta de tela!");
             console.log("eu sou um alerta de console!")
@@ -18,13 +19,29 @@
             }
             return pesos
         }
+
+        function notas() {
+            let notas = []
+            for (let i = 1; i <= 4; i++) {
+                notas[i] = parseFloat(prompt("Insira nota " + (i + ":"))
+                alert(notas[i])
+            }
+            return notas
+        }
+
+
     </script>
 </head>
 
 <body>
 
     <input type="button" onclick="funcao1()" value="Exibir Alert" />
+
     <input type="button" onclick="peso()" value="Botao 2" />
+
+    <input type="button" onclick="funcao1()" value="Botao 1" />
+    
+ 
 
 </body>
 
