@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Tutorial de Alert em JavaScript - Linha de Código</title>
-<script>
-function GetUserData()
-{
-    
-}
-function funcao1()
-{
-alert("Eu sou um alerta de tela!");
-console.log("eu sou um alerta de console!")
-}
-</script>
+    <title>Tutorial de Alert em JavaScript - Linha de Código</title>
+    <script>
+        function GetUserData() {
+
+        }
+        function notas() {
+            let notas = []
+            for (let i = 1; i <= 4; i++) {
+                notas[i] = parseFloat(prompt("Insira nota " + (i + ":"))
+                alert(notas[i])
+            }
+            return notas
+        }
+    </script>
 </head>
+
 <body>
 
-<input type="button" onclick="funcao1()" value="Exibir Alert" />
+    <input type="button" onclick="funcao1()" value="Exibir Alert" />
+    <input type="button" onclick="notas()" value="Botao 1" />
 
 </body>
-</html></div>
+
+</html>
+</div>
