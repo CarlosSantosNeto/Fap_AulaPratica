@@ -4,27 +4,54 @@
 <head>
     <title>Tutorial de Alert em JavaScript - Linha de Código</title>
     <script>
-        function notas() {
-            let notas = []
-            for (let i = 1; i <= 4; i++) {
-                notas[i] = parseFloat(prompt("Insira nota " + (i + ":")))
-                alert(notas[i])
+        let notas = []
+        let pesos = []
+        function nota() {
+            for (let i = 0; i < 4; i++) {
+                notas[i] = parseFloat(prompt("Insira nota " + (i + 1) +":"))
             }
+            return notas
         }
       
         function peso() {
-            let pesos = []
-            for (let i = 1; i<=4; i++) {
-                pesos[i] = parseFloat(prompt("Digite o peso para nota "+ i+":"))
+            for (let i = 0; i < 4; i++) {
+                pesos[i] = parseFloat(prompt("Digite o peso para nota "+ (i+1)+":"))
             }                
             return pesos
+        }
+        function calcularMedia(){
+            let media = 0
+            let somaPesos =0
+            let valid = true
+            
+            if (notas == 0){
+                alert("Voce não preencheu as notas")
+                valid = false
+            }
+            if( pesos == 0 ){
+                alert("Voce não preencheu os pesos")
+                valid = false
+            }
+
+            while(valid ==true){
+                for (let i = 0; i < 4; i++){
+                media+= notas[i] * pesos[i]
+                somaPesos+= pesos[i]
+            }
+            media/= somaPesos
+            alert("A media ponderada eh: "+ media)
+            
+            valid = false
+            }
+            
         }
     </script>
 </head>
 
 <body>
-    <input type="button" onclick="notas()" value="Botao 1" />
+    <input type="button" onclick="nota()" value="Botao 1" />
     <input type="button" onclick="peso()" value="Botao 2" /> 
+    <input type="button" onclick="calcularMedia()" value="Botao 3" /> 
 </body>
 
 </html>
